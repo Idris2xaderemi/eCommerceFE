@@ -1,5 +1,3 @@
-
-
 import axios from 'axios';
 
 const api = axios.create({
@@ -8,9 +6,6 @@ const api = axios.create({
   timeout: 15000,
 });
 
-// ... rest of your interceptors remain exactly the same
-
-// Request interceptor - Add auth token
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
@@ -22,7 +17,6 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Response interceptor - Handle errors
 api.interceptors.response.use(
   (response) => response,
   (error) => {
