@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import vendorService from '../../services/VendorService';
+import vendorService from '../../services/vendorService';
 
 export const getVendors = createAsyncThunk(
   'vendors/getVendors',
