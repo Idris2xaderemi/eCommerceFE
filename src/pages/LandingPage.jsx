@@ -134,7 +134,7 @@ const LandingPage = () => {
             View All <FaArrowRight />
           </Link>
         </div>
-        {products.length > 0 ? (
+        {products?.length > 0 ? (
           <div className="grid grid-4" style={{ marginTop: '2rem' }}>
             {products.slice(0, 8).map((product) => (
               <ProductCard key={product._id} product={product} />
@@ -157,7 +157,7 @@ const LandingPage = () => {
               View All <FaArrowRight />
             </Link>
           </div>
-          {vendors.length > 0 ? (
+          {vendors?.length > 0 ? (
             <div className="grid grid-4" style={{ marginTop: '2rem' }}>
               {vendors.slice(0, 8).map((vendor) => (
                 <VendorCard key={vendor._id} vendor={vendor} />

@@ -81,7 +81,7 @@ const handleDispute = async () => {
           </div>
         </div>
         <h4 className="mt-3">Items</h4>
-        {order.orderItems?.map((item, i) => (
+      {order?.orderItems?.map((item, i) => (
           <div
             key={i}
             className="flex justify-between items-center py-2 border-bottom"

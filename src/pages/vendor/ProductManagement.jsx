@@ -191,7 +191,7 @@ const ProductManagement = () => {
           <p style={{ color: '#ef4444', marginBottom: '0.75rem' }}>{error}</p>
           <button onClick={() => window.location.reload()} style={{ background: '#1e293b', color: 'white', border: 'none', borderRadius: '8px', padding: '0.5rem 1rem', cursor: 'pointer', fontSize: '0.85rem' }}>Retry</button>
         </div>
-      ) : filteredProducts.length === 0 ? (
+      ) : !filteredProducts?.length ? (
         <div style={{ textAlign: 'center', padding: '3rem', background: 'white', borderRadius: '16px', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
           <FaBox style={{ fontSize: '2.5rem', color: '#d1d5db', marginBottom: '0.75rem' }} />
           <h4 style={{ color: '#1e293b', marginBottom: '0.5rem' }}>
@@ -217,7 +217,7 @@ const ProductManagement = () => {
         </div>
       ) : (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
-          {filteredProducts.map((product) => (
+          {filteredProducts?.map((product) => (
             <div key={product._id} style={{
               background: 'white',
               borderRadius: '14px',

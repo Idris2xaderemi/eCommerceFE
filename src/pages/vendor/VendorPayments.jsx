@@ -15,7 +15,7 @@ const VendorPayments = () => {
   const vendorId = user?.vendorProfile?._id;
 
   // Only delivered orders that contain items belonging to this vendor
-  const vendorDeliveredOrders = orders.filter(
+const vendorDeliveredOrders = (orders || []).filter(
     (order) =>
       order.orderStatus === 'delivered' &&
       order.orderItems?.some((item) => item.vendor === vendorId)

@@ -103,7 +103,7 @@ const ProductsPage = () => {
       <div className="products-container">
         {isLoading ? (
           <LoadingSpinner />
-        ) : products.length === 0 ? (
+          ) : !products?.length ? (
           <div className="products-empty">
             <FaBoxOpen size={48} color="#d1d5db" />
             <h3>No products found</h3>
@@ -120,7 +120,7 @@ const ProductsPage = () => {
         ) : (
           <>
             <div className="products-grid">
-              {products.map((product) => (
+              {products?.map((product) => (
                 <Link
                   to={`/product/${product._id}`}
                   key={product._id}

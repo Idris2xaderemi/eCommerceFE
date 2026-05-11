@@ -14,7 +14,7 @@ const VendorOrders = () => {
   }, [dispatch]);
 
   // Filter orders containing items of this vendor
-  const vendorOrders = orders.filter((order) =>
+  const vendorOrders = (orders || []).filter((order) =>
     order.orderItems?.some((item) => item.vendor === vendorId)
   );
 
@@ -30,7 +30,7 @@ const VendorOrders = () => {
   return (
     <div>
       <h2>Orders</h2>
-      {vendorOrders.length === 0 ? (
+    {!vendorOrders?.length ? (
         <p>No orders yet</p>
       ) : (
         <div className="mt-3">

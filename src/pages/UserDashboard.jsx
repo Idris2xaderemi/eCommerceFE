@@ -17,7 +17,7 @@ const UserDashboard = () => {
   return (
     <div className="container mt-3">
       <h2>My Orders</h2>
-      {orders.length === 0 ? (
+    {!orders?.length ? (
         <p>No orders yet. <Link to="/products">Start shopping</Link></p>
       ) : (
         <div className="mt-2">

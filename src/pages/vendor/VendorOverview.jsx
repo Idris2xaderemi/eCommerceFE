@@ -102,7 +102,7 @@ const VendorOverview = () => {
     );
   }
 
-  const vendorOrders = orders.filter((order) =>
+const vendorOrders = (orders || []).filter((order) =>
     order.orderItems?.some((item) => item.vendor === vendor._id)
   );
   const pendingAndConfirmed = vendorOrders.filter(
@@ -116,9 +116,9 @@ const VendorOverview = () => {
       return sum + vendorItems.reduce((s, item) => s + item.price * item.quantity, 0);
     }, 0);
 
-  const totalProducts = allVendorProducts.length || vendor.totalProducts || 0;
-  const pendingProducts = allVendorProducts.filter((p) => !p.isApproved).length;
-  const approvedProducts = allVendorProducts.filter((p) => p.isApproved).length;
+const totalProducts = allVendorProducts?.length || vendor?.totalProducts || 0;
+const pendingProducts = (allVendorProducts || []).filter((p) => !p.isApproved).length;
+const approvedProducts = (allVendorProducts || []).filter((p) => p.isApproved).length;
 
   return (
     <div style={{ maxWidth: '900px' }}>
