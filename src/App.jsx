@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProfile } from './store/slices/authSlice'
 
+import ScrollToTop from './components/ScrollToTop'
 import Navbar from './components/Layout/Navbar'
 import Footer from './components/Layout/Footer'
 import ProtectedRoute from './components/Layout/ProtectedRoute'
@@ -51,6 +52,7 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1">
         <Routes>
@@ -87,7 +89,6 @@ function App() {
           <Route path="/vendor/dashboard/payments" element={<ProtectedRoute allowedRoles={['vendor']}><VendorPayments /></ProtectedRoute>} />
 
           <Route path="/admin/dashboard" element={<ProtectedRoute allowedRoles={['admin']}><AdminDashboard /></ProtectedRoute>} />
-
 
           <Route path="*" element={<NotFound />} />
         </Routes>
