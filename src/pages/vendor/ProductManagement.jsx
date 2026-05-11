@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import vendorService from '../../services/vendorService';
+import vendorService from '../../services/vendorServices';
 import { toast } from 'react-toastify';
 import {
   FaTrash,
