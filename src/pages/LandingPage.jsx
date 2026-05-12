@@ -145,7 +145,7 @@ const LandingPage = () => {
         )}
       </section>
 
-      {/* ========== OUR VENDORS ========== */}
+
       <section style={{ background: '#dce1e1', padding: '5rem 0' }}>
         <div className="container">
           <div className="products-header">
@@ -169,7 +169,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* ========== BECOME A VENDOR ========== */}
+
       {showVendorCTA && (
         <section style={{
           padding: '6rem 2rem',
@@ -193,7 +193,7 @@ const LandingPage = () => {
         </section>
       )}
 
-      {/* ========== WHY SHOP WITH US ========== */}
+
       <section style={{ padding: '5rem 0', background: 'linear-gradient(135deg, #0f172a, #1e293b)', color: 'white' }}>
         <div className="container text-center">
           <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Why Shop With Us?</h2>

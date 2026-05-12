@@ -73,7 +73,7 @@ const authSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      // Register
+
       .addCase(register.pending, (state) => {
         state.isLoading = true;
         state.error = null;
@@ -90,7 +90,7 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       })
-      // Login
+
       .addCase(login.pending, (state) => {
         state.isLoading = true;
         state.error = null;
@@ -107,7 +107,7 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       })
-      // Guest Login
+
       .addCase(guestLogin.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isAuthenticated = true;
@@ -116,7 +116,7 @@ const authSlice = createSlice({
         localStorage.setItem('user', JSON.stringify(action.payload.user));
         localStorage.setItem('token', action.payload.token);
       })
-      // Get Profile
+
       .addCase(getProfile.fulfilled, (state, action) => {
         state.user = action.payload.user;
         localStorage.setItem('user', JSON.stringify(action.payload.user));

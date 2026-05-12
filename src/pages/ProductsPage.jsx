@@ -61,7 +61,7 @@ const ProductsPage = () => {
 
   return (
     <div className="products-page">
-      {/* Hero Section */}
+
       <div className="products-hero" style={{backgroundColor:'linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #334155 100%)'}}>
         <div className="products-hero-icon">
           <FaBoxOpen />
@@ -72,7 +72,7 @@ const ProductsPage = () => {
         </p>
       </div>
 
-      {/* Search & Filter Bar */}
+
       <div className="products-toolbar">
         <div className="products-search">
           <FaSearch className="products-search-icon" />
@@ -99,7 +99,6 @@ const ProductsPage = () => {
         </select>
       </div>
 
-      {/* Product Grid */}
       <div className="products-container">
         {isLoading ? (
           <LoadingSpinner />

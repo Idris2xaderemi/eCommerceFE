@@ -75,7 +75,7 @@ const Register = () => {
     dispatch(register(userData));
   };
 
-  // If already logged in, offer logout
+
   if (isAuthenticated) {
     return (
       <div className="login-background flex justify-center items-center p-4">
@@ -101,7 +101,7 @@ const Register = () => {
           />
         </div>
 
-        {/* Right form */}
+
         <div className="login-form-wrapper">
           <div className="login-brand">KaraKata</div>
           <h3 className="login-title">Create your account</h3>

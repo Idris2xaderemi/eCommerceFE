@@ -1,5 +1,4 @@
-// Cart is primarily managed in Redux/localStorage
-// This service is for any server-side cart operations if needed
+
 
 import api from './api';
 

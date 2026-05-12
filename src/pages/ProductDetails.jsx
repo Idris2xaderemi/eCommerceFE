@@ -25,7 +25,7 @@ const ProductDetails = () => {
     return () => dispatch(clearProduct());
   }, [dispatch, id]);
 
-  // Refresh reviews after submission
+
   const refreshReviews = () => dispatch(getProductReviews(id));
 
   const handleAddToCart = () => {
@@ -95,7 +95,7 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {/* Reviews Section */}
+
       <div className="mt-4">
         <h3>Customer Reviews</h3>
         {reviews?.length === 0 ? (

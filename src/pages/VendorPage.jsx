@@ -88,7 +88,7 @@ const VendorPage = () => {
 
   return (
     <div className="page-vendor">
-      {/* Vendor Hero */}
+
       <div className="vendor-hero">
         <div className="vendor-hero-avatar">
           {getInitials(vendor.businessName)}
@@ -111,7 +111,7 @@ const VendorPage = () => {
         </div>
       </div>
 
-      {/* Products */}
+  
       <div className="vendor-products">
         <div className="vendor-products-toolbar">
           <h2>Products</h2>
@@ -182,7 +182,7 @@ const VendorPage = () => {
         )}
       </div>
 
-      {/* Reviews */}
+
       <div className="vendor-reviews">
         <div className="vendor-reviews-toolbar">
           <h2>Customer Reviews</h2>

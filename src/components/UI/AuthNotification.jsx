@@ -6,14 +6,14 @@ const AuthNotification = ({ type, message, onClose }) => {
   const [isLeaving, setIsLeaving] = useState(false);
 
   useEffect(() => {
-    // Animate in
+
     setTimeout(() => setIsVisible(true), 100);
     
-    // Auto dismiss after 3 seconds
+
     const timer = setTimeout(() => {
       setIsLeaving(true);
       setTimeout(onClose, 400);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [onClose]);

@@ -64,14 +64,14 @@ export const confirmDelivery = createAsyncThunk(
   }
 );
 
-// ---- VENDOR ITEMS STATUS UPDATE ----
+
 export const updateVendorItemsStatus = createAsyncThunk(
   'orders/updateVendorItemsStatus',
   async ({ orderId, status }, { rejectWithValue }) => {
     try {
       return await orderService.updateVendorItemsStatus(orderId, status);
     } catch (error) {
-      // Optionally, extract the exact message from the server response
+
       const msg = error.response?.data?.message || error.message || 'Failed to update items';
       return rejectWithValue(msg);
     }

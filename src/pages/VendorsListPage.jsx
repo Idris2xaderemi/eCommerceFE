@@ -48,7 +48,7 @@ const VendorsListPage = () => {
 
   return (
     <div className="vendors-page">
-      {/* Hero Section */}
+    
       <div className="vendors-hero">
         <div className="vendors-hero-icon">
           <FaStore />
@@ -59,7 +59,7 @@ const VendorsListPage = () => {
         </p>
       </div>
 
-      {/* Main Content */}
+    
       <div className="vendors-container">
         {isLoading ? (
           <LoadingSpinner />
